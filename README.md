@@ -1,2 +1,2 @@
 # Stratum
-Stratum comprises of rapid ML model development framework called \emph{Erudite}, and a lifecycle management framework for data analytics applications. Stratum can deploy and manage application components, and ML-as-a-service (for inference jobs) across distributed systems in an event-driven manner. 
+Stratum comprises of rapid ML model development framework called Erudite, and a lifecycle management framework for data analytics applications. Stratum can deploy and manage application components, and ML-as-a-service (for inference jobs) across distributed systems in an event-driven manner. 
