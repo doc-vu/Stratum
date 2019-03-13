@@ -3,10 +3,6 @@ Stratum comprises of rapid ML model development framework called Erudite, and a 
 
 
 Screenshots  
-
-
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/collaboration.png)
 
 
-
-![alt text](https://github.com/doc-vu/Stratum/blob/master/png/eruditeGenerate.png)
