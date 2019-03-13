@@ -1,0 +1,22 @@
+{
+  "panels": [
+    {
+      "id": "Header",
+      "panel": "Header/HeaderPanel",
+      "container": "header",
+      "DEBUG_ONLY": false
+    },
+    {
+      "id": "Footer",
+      "panel": "FooterControls/FooterControlsPanel",
+      "container": "footer",
+      "DEBUG_ONLY": false
+    },
+    {
+      "id": "MainPanel",
+      "panel": "ModelEditor/ModelEditorPanel",
+      "container": "center",
+      "DEBUG_ONLY": false
+    }
+  ]
+}

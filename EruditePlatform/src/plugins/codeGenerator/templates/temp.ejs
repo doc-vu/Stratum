@@ -1,0 +1,72 @@
+,{
+"cell_type": "code",
+"execution_count": 1,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["import pandas as pd\nimport numpy as np\nfrom sklearn import cross_validation\nfrom sklearn.metrics import accuracy_score\nfrom sklearn.neural_network import MLPClassifier\n\ntrain = pd.read_csv(\"./MNISTtrain.csv\").fillna(0)\nfeatures = train.columns[1:]\nX = train[features]\ny = train['label']"]
+    }
+,{
+"cell_type": "code",
+"execution_count": 2,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["# extract X, y from data\nX, y = train.drop('label', axis=1).values, train['label'].values\n\nX_train, X_test, y_train, y_test = cross_validation.train_test_split(X/255.,y,test_size=0.1,random_state=0)"]
+    }
+,{
+"cell_type": "code",
+"execution_count": 3,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["from sklearn.neural_network import MLPClassifier\n\nclf_adam = MLPClassifier(solver='adam', hidden_layer_sizes=(5, 2), random_state=1, batch_size='auto', max_iter=2000)\nclf_adam.fit(X_train, y_train)\ny_pred_adam = clf_adam.predict(X_test)\n"]
+    }
+,{
+"cell_type": "code",
+"execution_count": 4,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["clf_sgd = MLPClassifier(solver='sgd', hidden_layer_sizes=(5, 2), random_state=1, batch_size='auto', max_iter=2000)\nclf_sgd.fit(X_train, y_train)\ny_pred_sgd = clf_sgd.predict(X_test)"]
+    }
+,{
+"cell_type": "code",
+"execution_count": 5,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["clf_lbfgs = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)\nclf_lbfgs.fit(X_train, y_train)\ny_pred_lbfgs = clf_sgd.predict(X_test)"]
+    }
+,{
+"cell_type": "code",
+"execution_count": 6,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["acc_adam = accuracy_score(y_test, y_pred_adam)\nprint \"ADAM accuracy: \",acc_adam\n\nimport matplotlib.pyplot as plt\nplt.plot(clf_adam.loss_curve_)\nplt.show()"]
+    }
+,{
+"cell_type": "code",
+"execution_count": 7,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["acc_lbfgs = accuracy_score(y_test, y_pred_lbfgs)\nprint \"LBFGS accuracy: \",acc_lbfgs"]
+    }
+,{
+"cell_type": "code",
+"execution_count": 8,
+"metadata": {
+"collapsed": true
+},
+"outputs": [],
+"source": ["acc_sgd = accuracy_score(y_test, y_pred_sgd)\nprint \"SGD accuracy: \",acc_sgd\n\nimport matplotlib.pyplot as plt\nplt.plot(clf_sgd.loss_curve_)\nplt.show()"]
+    }

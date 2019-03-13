@@ -1,0 +1,74 @@
+{
+  "components": {
+    "plugins": {
+      "Linear_Regression_CodeGenerator": {
+        "src": "src/plugins/Linear_Regression_CodeGenerator",
+        "test": "test/plugins/Linear_Regression_CodeGenerator"
+      },
+      "Logistic_Regression_CodeGenerator": {
+        "src": "src/plugins/Logistic_Regression_CodeGenerator",
+        "test": "test/plugins/Logistic_Regression_CodeGenerator"
+      },
+      "KMeans_CodeGenerator": {
+        "src": "src/plugins/KMeans_CodeGenerator",
+        "test": "test/plugins/KMeans_CodeGenerator"
+      },
+      "codeGenerator": {
+        "src": "src/plugins/codeGenerator",
+        "test": "test/plugins/codeGenerator"
+      },
+      "nngenerator": {
+        "src": "src/plugins/nngenerator",
+        "test": "test/plugins/nngenerator"
+      }
+    },
+    "visualizers": {
+      "MLSimulator": {
+        "src": "panels/MLSimulator/MLSimulatorPanel",
+        "title": "MLSimulator",
+        "panel": "src/visualizers/panels/MLSimulator",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/MLSimulator"
+      }
+    },
+    "layouts": {},
+    "decorators": {
+      "DocumentDecorator": {
+        "src": "src/decorators/DocumentDecorator"
+      },
+      "linearRegDecorator": {
+        "src": "src/decorators/linearRegDecorator"
+      },
+      "IPythonDecorator": {
+        "src": "src/decorators/IPythonDecorator"
+      }
+    },
+    "addons": {},
+    "routers": {},
+    "seeds": {}
+  },
+  "dependencies": {
+    "plugins": {},
+    "visualizers": {
+      "FloatingActionButton": {
+        "src": "panels/FloatingActionButton/FloatingActionButtonPanel",
+        "title": "FloatingActionButton",
+        "panel": "src/visualizers/panels/FloatingActionButton",
+        "secondary": true,
+        "widget": "src/visualizers/widgets/FloatingActionButton",
+        "project": "webgme-fab"
+      }
+    },
+    "layouts": {
+      "CHFLayout": {
+        "project": "webgme-chflayout",
+        "path": "node_modules/webgme-chflayout/src/layouts/CHFLayout",
+        "enabled": true
+      }
+    },
+    "decorators": {},
+    "addons": {},
+    "routers": {},
+    "seeds": {}
+  }
+}

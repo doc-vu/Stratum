@@ -1,0 +1,8 @@
+[
+  {
+    "id": "MLSimulator",
+    "title": "MLSimulator",
+    "panel": "panels/MLSimulator/MLSimulatorPanel",
+    "DEBUG_ONLY": false
+  }
+]
