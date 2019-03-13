@@ -8,6 +8,10 @@ Second, start mongodb locally by running the `mongod` executable in your mongodb
 
 Then, run `webgme start` from the project root to start . Finally, navigate to `http://localhost:7777` to start using ML!
 
+### Model Development using Erudite Platform
+
+![alt text](https://github.com/doc-vu/Stratum/blob/master/png/Erudite_Platform.png)
+
 
 
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/eruditeModel.png)
