@@ -11,7 +11,7 @@ Sample Data Analytics Platform is shown in the below figure. This image is the b
     
 2. We present a rapid AI/ML model development framework, where the developers can connect to a wide range of data sources and build their own  AI/ML applications.  %Specifically, Stratum provides an AI/ML Service Encapsulation approach by leveraging CPU and  GPU-enabled containerization architectures and API abstraction for common ML libraries and frameworks. It provides an easy-to-use framework on which developers can quickly build, train and evaluate the ML model on historical data requiring little to no code development.
     
-3. Once the AI/ML model is ready and finalized, the application components can be exposed as RESTful APIs, and seamlessly integrated into the business application workflow using Stratum (as shown in Figure 1). Stratum manages the lifecycle of models efficiently and triggers retraining of the models also if the model becomes stale over time.
+3. Once the AI/ML model is ready and finalized, the application components can be exposed as RESTful APIs, and seamlessly integrated into the business application workflow using Stratum (as shown in Figure). Stratum manages the lifecycle of models efficiently and triggers retraining of the models also if the model becomes stale over time.
     
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/ModelDeploy.png)
     
