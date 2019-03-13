@@ -13,3 +13,8 @@ Then, run `webgme start` from the project root to start . Finally, navigate to `
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/eruditeModel.png)
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/MLAlgos.png)
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/erudite.png)
+![alt text](https://github.com/doc-vu/Stratum/blob/master/png/overview.PNG)
+![alt text](https://github.com/doc-vu/Stratum/blob/master/png/pipeline.PNG)
+
+
+![alt text](https://github.com/doc-vu/Stratum/blob/master/png/StreamLineML.png)
