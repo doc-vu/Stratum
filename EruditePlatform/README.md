@@ -33,4 +33,5 @@ Using this metamodel, the data-scientist needs to drag relevant machine learning
 the type of layers such as dense, CNN, RNN for deep learning.  
 
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/pipeline.PNG)
+Above figure shows how Stratum model is converted (Template-based Transformation) into python code in ipython notebook.  
 
