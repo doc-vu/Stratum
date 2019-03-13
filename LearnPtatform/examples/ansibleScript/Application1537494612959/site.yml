@@ -1,0 +1,16 @@
+---
+- name: Deploying Application
+  hosts: all
+  become_user: root
+  become: true
+  become_method: sudo
+
+  gather_facts: no
+
+  pre_tasks:
+  - name: install python2
+    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+
+
+- include: dbapp.yml

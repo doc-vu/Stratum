@@ -1,0 +1,22 @@
+- hosts: dbserver
+  become_user: root
+  become: true
+  become_method: sudo
+
+  vars:
+    - path: https://github.com/Anirban2404/phpMySQLapp.git
+      mysql_port: 3306
+      mysql_bind_address: "0.0.0.0" 
+      mysql_user: root
+      mysql_root_pass: admin
+
+
+      ubuntu_mysql_pkgs:
+         - mysql-server
+         - mysql-client
+         - python-mysqldb
+         - libmysqlclient-dev
+
+
+  roles:
+    - DBApplication

@@ -1,0 +1,19 @@
+---
+- name: Install PHP-FPM
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items: "{{ ubuntu_php_pkgs }}"
+
+- name: Copy the templates to their respestive destination
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+  with_items:
+    - { src: 'www.conf.j2', dest: '/etc/php/7.0/fpm/pool.d/www.conf' }
+    - { src: 'php.ini.j2', dest: '/etc/php/7.0/fpm/php.ini' }
+  notify:
+      - restart apache2

@@ -1,0 +1,4 @@
+---
+- include: install_php.yml
+- include: copy_code.yml
+- include: install_apache.yml
