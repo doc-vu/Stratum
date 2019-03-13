@@ -1,4 +1,4 @@
-# ML
+# Erudite Development Platform
 ## Installation
 First, install the ML following:
 - [NodeJS](https://nodejs.org/en/) (v4.x.x recommended)
