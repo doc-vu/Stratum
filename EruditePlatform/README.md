@@ -27,11 +27,13 @@ As shown in the above figure,  the ML developer can build their machine learning
 The Erudite model transformer can distribute different jobs with different ML techniques over a cluster of connected machines and aids the developer to select the best model or ensemble of models based on the user's choice of evaluation methods. In Box 4, sample ROC evalution curve is shown. 
 
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/MLAlgos.png)
+
 The metamodel for the supported ML algorithms is shown in the above figure. We captured the specifications for a diverse set of ML algorithms including classification (e.g., logistic regression, naive Bayes), regression, decision trees, random forests, and gradient-boosted trees, recommendation (ALS), clustering (K-means, GMMs), and many others. 
 
 Using this metamodel, the data-scientist needs to drag relevant machine learning blocks and needs to define all the parameters such as fit_intercept, normalize, n_jobs for scikit-learn linear regression block or have to specify
 the type of layers such as dense, CNN, RNN for deep learning.  
 
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/pipeline.PNG)
+
 Above figure shows how Stratum model is converted (Template-based Transformation) into python code in ipython notebook.  
 
