@@ -16,6 +16,8 @@ Once the AI/ML model is ready and finalized, the application components can be e
     
 Stratum takes care of dynamic resource management by providing a strategic design wherein other resource management algorithms can be plugged in.  It supports monitoring of data management and models in production by instrumenting finer-grained performance metrics collection on the target hardware.  Based on the collected performance metrics such as CPU, memory, IO utilization the resource management algorithms can enforce horizontal and vertical elasticity of resources to maintain the QoS requirements.  We validated these claims using our default resource management algorithms are enforced. 
 
+
+Stratum collaborative environment 
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/collaboration.png)
 
 
