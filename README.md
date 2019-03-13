@@ -31,3 +31,6 @@ Stratum core concepts are developed using WebGME which supports collaboration in
 
  Stratum contains a Resource Manager to maintain the QoS of the application components by scaling and migrating the application. Stratum continuously monitor the performance metrics to take resource management decisions.
  components. 
+ 
+ 
+![alt text](https://github.com/doc-vu/Stratum/blob/master/png/resource.png)
