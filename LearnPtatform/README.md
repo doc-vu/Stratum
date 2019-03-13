@@ -1,4 +1,4 @@
-# learnPlatform
+# LearnPlatform
 ## Installation
 First, install the learnPlatform following:
 - [NodeJS](https://nodejs.org/en/) (v4.x.x recommended)
