@@ -25,3 +25,9 @@ Sample Data Analytics Platform is shown in the below figure. This image is the b
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/collaboration.png)
 
 Stratum core concepts are developed using WebGME which supports collaboration in a version-controlled environment. We also incorporated the automatic version control in Stratum framework so that we can recall a specific version of the framework later if required. We save data, code, and attributes of the modeling environment to guarantee that every state is reproducible. Because of collaborative editing support, the developers can easily tag branches when they are developing their part of the model, and the branches can be merged easily to integrate the whole model. Above figure shows an integrated version control for all developers to make any historical state reproducible in the collaborative environment. 
+
+
+### Stratum Resource Manager
+
+ Stratum contains a Resource Manager to maintain the QoS of the application components by scaling and migrating the application. Stratum continuously monitor the performance metrics to take resource management decisions.
+ components. 
