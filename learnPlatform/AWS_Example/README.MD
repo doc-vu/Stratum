@@ -1,5 +1,6 @@
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/DataAnalytics_on_AWS.png)
 
+To create AWS Data Analytics Platform, the deployer need to install the components as below.
 Components of the AWS Data Analytics Platform are:
 1. AWS Compute nodes, which are responsible for running the computation, producing and publishing
 the result as streaming data.
@@ -16,3 +17,5 @@ Spark, Presto, and HBase is also integrated with Amazon EMR. AWS data stores suc
 and Amazon DynamoDB is also integrated with EMR.
 6. Amazon QuickSight, which is a business analytics service to build visualizations, perform ad-hoc
 analysis, and quickly get business insights from data.
+
+A sample infrastructure code to deploy these components on AWS stack is in the aws_services.py python file.
