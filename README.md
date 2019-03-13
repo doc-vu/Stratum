@@ -14,7 +14,7 @@ Sample Data Analytics Platform is shown here:
     
 4. Stratum provides an intelligent way to transfer the trained model to the target machines (across the cloud-fog-edge spectrum) as an ML module for inference and analysis of incoming data sources. %ML module(s) can be placed on the edge devices for edge analytics, or at Cloud or Fog layer for live or in-depth analysis of data depending on user requirement and requirement-capability analysis. The serverless platform using declarative specifications handle all of these responsibilities.
     
-5. Stratum takes care of dynamic resource management by providing a strategic design wherein other resource management algorithms can be plugged in.  It supports monitoring of data management and models in production by instrumenting finer-grained performance metrics collection on the target hardware.  Based on the collected performance metrics such as CPU, memory, IO utilization the resource management algorithms can enforce horizontal and vertical elasticity of resources to maintain the QoS requirements.  We validated these claims using our default resource management algorithms are enforced. 
+5. Stratum takes care of dynamic resource management by providing a strategic design wherein other resource management algorithms can be plugged in.  It supports monitoring of data management and models in production by instrumenting finer-grained performance metrics collection on the target hardware.  Based on the collected performance metrics such as CPU, memory, IO utilization the resource management algorithms can enforce horizontal and vertical elasticity of resources to maintain the QoS requirements. 
 
 
 ### Stratum collaborative and version-controlled environment
