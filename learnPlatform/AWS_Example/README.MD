@@ -1,3 +1,5 @@
+![alt text](https://github.com/doc-vu/Stratum/blob/master/png/DataAnalytics_on_AWS.png)
+
 Components of the AWS Data Analytics Platform are:
 1. AWS Compute nodes, which are responsible for running the computation, producing and publishing
 the result as streaming data.
