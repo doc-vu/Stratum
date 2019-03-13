@@ -1,3 +1,4 @@
+# Deployment Automation on AWS stack
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/DataAnalytics_on_AWS.png)
 
 To create AWS Data Analytics Platform, the deployer need to install the components as below.
