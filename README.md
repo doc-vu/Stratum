@@ -17,7 +17,8 @@ Sample Data Analytics Platform is shown here:
 5. Stratum takes care of dynamic resource management by providing a strategic design wherein other resource management algorithms can be plugged in.  It supports monitoring of data management and models in production by instrumenting finer-grained performance metrics collection on the target hardware.  Based on the collected performance metrics such as CPU, memory, IO utilization the resource management algorithms can enforce horizontal and vertical elasticity of resources to maintain the QoS requirements.  We validated these claims using our default resource management algorithms are enforced. 
 
 
-Stratum collaborative and version-controlled environment
+###Stratum collaborative and version-controlled environment
+
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/collaboration.png)
 
 Stratum core concepts are developed using WebGME which supports collaboration in a version-controlled environment. We also incorporated the automatic version control in Stratum framework so that we can recall a specific version of the framework later if required. We save data, code, and attributes of the modeling environment to guarantee that every state is reproducible. Because of collaborative editing support, the developers can easily tag branches when they are developing their part of the model, and the branches can be merged easily to integrate the whole model. Above figure shows an integrated version control for all developers to make any historical state reproducible in the collaborative environment. 
