@@ -5,7 +5,7 @@ Stratum comprises of rapid ML model development framework called Erudite, and a 
 Sample Data Analytics Platform is shown here:
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/ModelArch.png)
 
-###Stratum contributions:
+### Stratum contributions:
 Stratum provides a Domain-Specific Modeling Language (DSML) to hide the lower-level details of infrastructure deployment and provides an easy to use web-interface for the end users to utilize the platform. Stratum support built-in 'correct-by-construction' using constraint checker. Stratum can validate the application deployment architecture by conducting a requirement-capability analysis on the target hardware before actual deployment.  
     
 We present a rapid AI/ML model development framework, where the developers can connect to a wide range of data sources and build their own  AI/ML applications.  %Specifically, Stratum provides an AI/ML Service Encapsulation approach by leveraging CPU and  GPU-enabled containerization architectures and API abstraction for common ML libraries and frameworks. It provides an easy-to-use framework on which developers can quickly build, train and evaluate the ML model on historical data requiring little to no code development.
