@@ -17,7 +17,7 @@ Sample Data Analytics Platform is shown here:
 5. Stratum takes care of dynamic resource management by providing a strategic design wherein other resource management algorithms can be plugged in.  It supports monitoring of data management and models in production by instrumenting finer-grained performance metrics collection on the target hardware.  Based on the collected performance metrics such as CPU, memory, IO utilization the resource management algorithms can enforce horizontal and vertical elasticity of resources to maintain the QoS requirements.  We validated these claims using our default resource management algorithms are enforced. 
 
 
-###Stratum collaborative and version-controlled environment
+### Stratum collaborative and version-controlled environment
 
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/collaboration.png)
 
