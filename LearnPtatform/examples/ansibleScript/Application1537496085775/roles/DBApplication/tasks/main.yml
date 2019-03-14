@@ -1,0 +1,3 @@
+---
+- include: copy_code.yml
+- include: install_mysql.yml

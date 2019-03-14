@@ -9,7 +9,7 @@ Sample Data Analytics Platform is shown in the below figure. This image is the b
 ### Stratum contributions:
 1. Stratum provides a Domain-Specific Modeling Language (DSML) to hide the lower-level details of infrastructure deployment and provides an easy to use web-interface for the end users to utilize the platform. Stratum support built-in 'correct-by-construction' using constraint checker. Stratum can validate the application deployment architecture by conducting a requirement-capability analysis on the target hardware before actual deployment.  
     
-2. We present a rapid AI/ML model development framework, where the developers can connect to a wide range of data sources and build their own  AI/ML applications.  %Specifically, Stratum provides an AI/ML Service Encapsulation approach by leveraging CPU and  GPU-enabled containerization architectures and API abstraction for common ML libraries and frameworks. It provides an easy-to-use framework on which developers can quickly build, train and evaluate the ML model on historical data requiring little to no code development.
+2. We present a rapid AI/ML model development framework, where the developers can connect to a wide range of data sources and build their own  AI/ML applications.  Specifically, Stratum provides an AI/ML Service Encapsulation approach by leveraging CPU and  GPU-enabled containerization architectures and API abstraction for common ML libraries and frameworks. It provides an easy-to-use framework on which developers can quickly build, train and evaluate the ML model on historical data requiring little to no code development.
     
 3. Once the AI/ML model is ready and finalized, the application components can be exposed as RESTful APIs, and seamlessly integrated into the business application workflow using Stratum (as shown in Figure). Stratum manages the lifecycle of models efficiently and triggers retraining of the models also if the model becomes stale over time.
     
@@ -25,3 +25,15 @@ Sample Data Analytics Platform is shown in the below figure. This image is the b
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/collaboration.png)
 
 Stratum core concepts are developed using WebGME which supports collaboration in a version-controlled environment. We also incorporated the automatic version control in Stratum framework so that we can recall a specific version of the framework later if required. We save data, code, and attributes of the modeling environment to guarantee that every state is reproducible. Because of collaborative editing support, the developers can easily tag branches when they are developing their part of the model, and the branches can be merged easily to integrate the whole model. Above figure shows an integrated version control for all developers to make any historical state reproducible in the collaborative environment. 
+
+
+### Stratum Resource Manager
+
+ Stratum contains a Resource Manager to maintain the QoS of the application components by scaling and migrating the application. Stratum continuously monitor the performance metrics to take resource management decisions.
+ components. 
+ 
+ 
+![alt text](https://github.com/doc-vu/Stratum/blob/master/png/resource.png)
+
+## Installation
+Please check [LearnPtatform](https://github.com/doc-vu/Stratum/tree/master/LearnPtatform) and [EruditePlatform](https://github.com/doc-vu/Stratum/tree/master/EruditePlatform) for installation details.

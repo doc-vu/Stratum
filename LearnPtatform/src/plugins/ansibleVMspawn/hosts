@@ -1,0 +1,2 @@
+[MyLocalVMs]
+129.59.234.224  ansible_connection=local

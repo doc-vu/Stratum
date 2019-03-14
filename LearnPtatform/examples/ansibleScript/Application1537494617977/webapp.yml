@@ -1,0 +1,20 @@
+- hosts: webserver
+  become_user: root
+  become: true
+  become_method: sudo
+
+
+    
+
+  vars:
+    - path: https://github.com/Anirban2404/phpMySQLapp.git
+
+      ubuntu_php_pkgs:
+         - libapache2-mod-php
+         - php
+         - php-fpm
+         - php-mysql
+
+
+  roles:
+    - WebApplication

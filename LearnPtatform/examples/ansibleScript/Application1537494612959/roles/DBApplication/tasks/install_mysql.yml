@@ -1,0 +1,61 @@
+---
+- name: Install the MySQL packages
+  apt:
+    name: "{{ item }}"
+    state: installed
+    update_cache: yes
+  with_items: "{{ ubuntu_mysql_pkgs }}"
+
+- name: Install python-pip
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+       - python-pip
+       - python-dev
+  register: pip
+
+- name: Install the MySQL-python through pip
+  become: true
+  pip:
+    name: "{{ item }}"
+    state: forcereinstall
+  with_items:
+    - pip
+    - mysqlclient
+#    - MySQL-python
+  when: pip.changed
+
+- name: Update MySQL root password for all root accounts
+  mysql_user:
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_root_pass }}"
+    state: present
+
+- name: Copy the templates to their respestive destination
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: "{{ item.mode | default(644) }}"
+  with_items:
+    - { src: 'my.cnf.j2', dest: '/etc/mysql/my.cnf' }
+    - { src: 'root.cnf.j2', dest: '~/.my.cnf', mode: '600' }
+  notify:
+   - Restart MySQL
+
+#- name: Create Application Database
+#  mysql_db: name=bookstore state=import target=/var/www/html/mySqlDB/bookDB.sql
+
+
+#- name: Create Application Database
+#  mysql_db: name=moviedb state=import state=import target=/var/www/html/mySqlDB/movieDB.sql
+
+#- name: Create Application DB User
+#  mysql_user: name={{ mysql_user }} password={{ mysql_root_pass }} priv=*.*:ALL host='%' state=present
+- name: Create Application Database
+  mysql_db: name=moviedb state=import target=/var/www/html/mySqlDB/movieDB.sql
+
+- name: Create Application Database
+  mysql_db: name=bookstore state=import target=/var/www/html/mySqlDB/bookDB.sql
+- name: Create Application DB User
+  mysql_user: name={{ mysql_user }} password={{ mysql_root_pass }} priv=*.*:ALL host='%' state=present

@@ -1,0 +1,33 @@
+---
+# These tasks are responsible for copying the latest dev/production code from
+# the version control system.
+
+#- name: Make sure index.html is present for the default virtual host
+#  copy: src={{path}} dest=/var/www/html/
+
+- name: Install Git
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+      - git
+
+- name: Delete directory
+  file: path=/var/www/html state=absent
+
+- name: Create directory
+  file: path=/var/www/html state=directory mode=0777
+  register: create
+
+- name: Git Clone Repo
+  git:
+    repo: "{{ path }}"
+    dest: /var/www/html/
+  register: git_finished
+  when: create.changed
+
+- name: Make sure owned by www-data
+  file: path=/var/www/html/ owner=www-data group=www-data recurse=yes
+  when: git_finished.changed
+
+#- name: Make sure all files are owned by www-data
+#  file: path=/var/www/html/index.php owner=www-data group=www-data
+#  when: git_finished.changed

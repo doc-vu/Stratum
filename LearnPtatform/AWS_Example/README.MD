@@ -3,7 +3,7 @@
 
 To create AWS Data Analytics Platform, the deployer need to install the components as below.
 Components of the AWS Data Analytics Platform are:
-1. AWS Compute nodes, which are responsible for running the computation, producing and publishing
+1. AWS Consumer nodes, which are responsible for running the computation, producing and publishing
 the result as streaming data.
 2. A Data Ingestion Tool, (e.g., Amazon Simple Queue Service (SQS), Amazon Kinesis) which is
 responsible for sending, storing, and receiving messages between software components or services

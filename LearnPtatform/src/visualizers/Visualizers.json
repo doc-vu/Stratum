@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ICore",
+    "title": "ICore",
+    "panel": "panels/ICore/ICorePanel",
+    "DEBUG_ONLY": false
+  },
+  {
+    "id": "codeVizualizer",
+    "title": "codeVizualizer",
+    "panel": "panels/codeVizualizer/codeVizualizerPanel",
+    "DEBUG_ONLY": false
+  },
+  {
+    "id": "CodeEditor",
+    "title": "CodeEditor",
+    "panel": "panels/CodeEditor/CodeEditorPanel",
+    "DEBUG_ONLY": false
+  }
+]

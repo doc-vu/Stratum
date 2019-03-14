@@ -1,0 +1,59 @@
+# preliminary requirement:
+# edit host name 
+# adduser hduser
+# ssh setup
+ 
+# optional
+# sudo adduser hduser
+# sudo adduser hduser sudo
+
+sudo apt install -y default-jre
+sudo apt install -y openjdk-11-jdk-headless 
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+
+wget -O /usr/local/hadoop-3.2.0.tar.gz http://mirror.cc.columbia.edu/pub/software/apache/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz
+wget -O /usr/local/spark-2.4.0-bin-hadoop2.7.tgz http://mirrors.koehn.com/apache/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz
+
+sudo tar -xvf /usr/local/hadoop-3.2.0.tar.gz -C /usr/local/
+sudo mv /usr/local/hadoop-3.2.0 /usr/local/hadoop
+
+sudo tar -xvf /usr/local/spark-2.4.0-bin-hadoop2.7.tgz -C /usr/local/
+sudo mv /usr/local/spark-2.4.0-bin-hadoop2.7 /usr/local/spark
+
+sudo chown -R hduser:hduser hadoop
+sudo chown -R hduser:hduser spark
+
+
+###
+# FOR HADOOP
+# Following files are need to change, I’d recommend you have a template is pre-prepared, and copy that template to /usr/local/hadoop/etc/hadoop/
+###
+
+#hadoop-env.sh
+No need to change anything within the template
+
+#core-site.xml
+change HADOOP-MASTER-IP to master machine IP
+
+#hdfs-site.xml
+change REPLICATION_NUM, DATANODE_NAME_DIR, DATANODE_LOCAL_DIR
+
+#mapred-site.xml
+No need to change anything within the template
+
+#yarn-site.xml
+No need to change anything within the template
+
+#workers
+replace "localhost" with all slaves' host name
+
+###
+# FOR SPARK
+# Following files are need to change, I’d recommend you have a template is pre-prepared, and copy that template to /usr/local/spark/conf/
+###
+
+#spark-env.sh
+change SPARK_MASTER_IP to master machine IP
+
+#slaves
+replace "localhost" with all slaves' host name

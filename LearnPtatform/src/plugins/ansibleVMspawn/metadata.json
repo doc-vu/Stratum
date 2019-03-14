@@ -1,0 +1,14 @@
+{
+  "id": "ansibleVMspawn",
+  "name": "ansibleVMspawn",
+  "version": "0.1.0",
+  "description": "Plugin to configure Application(s)",
+  "icon": {
+    "class": "glyphicon glyphicon-cog",
+    "src": ""
+  },
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": false,
+  "writeAccessRequired": false,
+  "configStructure": []
+}

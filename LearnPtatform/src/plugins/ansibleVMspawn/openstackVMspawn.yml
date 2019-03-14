@@ -1,0 +1,28 @@
+# This playbook will create a horizon VM
+# Creates a new VM and attaches to a network and passes metadata to the instance
+- name: Deploy on OpenStack
+  #strategy: free
+  hosts: MyLocalVMs
+  gather_facts: false
+
+  tasks:
+    # first install a bunch of packages on the local VM
+    - name: "Create a VM on Horizon Cloud"
+      os_server:
+          name: "{{ VM_Name }}"
+          image: "{{ Image_Name }}"
+          flavor: "{{ Flavor_Name }}"
+          key_name: "{{ Key_Name }}"
+          security_groups: default
+          availability_zone: "{{ Host_Name }}"
+          auto_floating_ip: false
+          nics:
+            - net-name: "{{ Network_Name }}"
+          wait: yes
+          timeout: 180
+          state: present  # because we need to create and not delete
+
+      register: result
+      until: result is success
+      retries: 25
+      delay: 2
