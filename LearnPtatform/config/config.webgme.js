@@ -8,18 +8,7 @@ var config = require('webgme/config/config.default'),
 
 // The paths can be loaded from the webgme-setup.json
 
-
-
-
-
-
-
-// Visualizer descriptors
-
 // Add requirejs paths
-
-
-
 config.mongo.uri = 'mongodb://127.0.0.1:27017/learnplatform';
 validateConfig(config);
 module.exports = config;

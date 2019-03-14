@@ -8,8 +8,10 @@ var config = require('./config.webgme'),
 // config.server.port = 8080;
 // config.mongo.uri = 'mongodb://127.0.0.1:27017/webgme_my_app';
 
+// Authentication/Authorization
+config.authentication.enable = true;
+
 // User Registration
-config.authentication.enable = true
 config.authentication.allowGuests = true
 config.authentication.allowUserRegistration = true
 config.authentication.guestAccount = 'guest'
@@ -19,6 +21,10 @@ config.seedProjects.enable = true;
 config.seedProjects.defaultProject = 'Erudite';
 config.seedProjects.basePaths.push("./src/seeds");
 
+// Routing
+config.authentication.logInUrl = '/profile/login';
+config.authentication.logOutUrl = '/profile/login';
+
 // Add/overwrite any additional settings here
 config.server.port = 7777;
 
@@ -26,14 +32,15 @@ config.server.port = 7777;
 config.plugin.allowServerExecution = true;
 // Custom constraints
 config.core.enableCustomConstraints = true;
-
+// WebHooks
+config.webhooks.enable = true;
 
 
 // UI
 //config.visualization.layout.default = 'SidebarLayout';
 config.executor.enable = true;
 config.executor.clearOldDataAtStartUp = true;
-config.visualization.svgDirs = ['./icons'];
+config.visualization.svgDirs = ['/home/ubuntu/Stratum/EruditePlatform/icons'];
 
 // RequireJS paths
 //config.requirejsPaths.erudite = "./src/common/"

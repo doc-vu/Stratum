@@ -16,6 +16,11 @@ config.authentication.guestAccount = 'guest';
 config.authentication.allowUserRegistration = true;
 config.authentication.guestAccount = 'guest'
 
+// Seeds
+config.seedProjects.enable = true;
+config.seedProjects.defaultProject = 'Stratum';
+config.seedProjects.basePaths.push("./src/seeds");
+
 // Routing
 config.authentication.logInUrl = '/profile/login';
 config.authentication.logOutUrl = '/profile/login';
@@ -30,7 +35,7 @@ config.webhooks.enable = true;
 //config.visualization.layout.default = 'SidebarLayout';
 config.executor.enable = true;
 config.executor.clearOldDataAtStartUp = true;
-config.visualization.svgDirs = ['/home/ubuntu/streamlinedMLProject/learnPlatform/icons'];
+config.visualization.svgDirs = ['/home/ubuntu/Stratum/LearnPtatform/deploymentIcons'];
 // RequireJS paths
 config.requirejsPaths.cloudcamp = "./src/common/"
 
