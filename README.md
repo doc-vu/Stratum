@@ -34,3 +34,6 @@ Stratum core concepts are developed using WebGME which supports collaboration in
  
  
 ![alt text](https://github.com/doc-vu/Stratum/blob/master/png/resource.png)
+
+## Installation
+Please check [LearnPtatform](https://github.com/doc-vu/Stratum/tree/master/LearnPtatform) and [EruditePlatform](https://github.com/doc-vu/Stratum/tree/master/EruditePlatform) for installation details.
